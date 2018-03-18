@@ -1,0 +1,18 @@
+// What it needs to store and do, in brief
+// Variables:
+// * party data (just wallets?) 
+// * Asset data
+// * Deposit and fee data
+// * Rental duration and expiry data
+
+// Functions:
+// * create contract
+// * expire contract (transfer deposit back, transfer fee forward)
+// * dispute contract (remove expiry)
+// * resolve dispute (transfer deposit amount and fee)
+
+// Events?
+
+// -- questions, ideas -- 
+// Use self-destruct?
+// How to set expiry?
