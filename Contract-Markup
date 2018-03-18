@@ -1,0 +1,119 @@
+<%
+==Provider Information==
+[[Provider First Name]] 
+[[Provider Last Name]]
+[[Provider Address]]
+[[Provider Wallet address]]
+[[Provider Wallet Currency]]
+[[Provider Wallet]]
+
+==Asset Details==
+[[Asset Type]]
+[[Asset Description]]
+[[Asset Value]]
+[[Asset Deposit]]
+[[Asset Deposit Expiry]]
+[[Asset Rental Fee]]
+[[Vehicle Type]]
+[[Vehicle Year]]
+[[Vehicle Make]]
+[[Vehicle Model]]
+[[Vehicle Color]]
+[[Vehicle VIN]]
+[[Odometer Reading]]
+
+==Renter Information==
+[[Renter First Name]]
+[[Renter Last Name]]
+[[Renter Address]]
+[[Renter Phone Number]]
+[[Renter Wallet]]
+[[Renter Wallet Currency]]
+
+
+[[Rental Start Day]]
+[[Rental End Day]]
+[[Rental Duration]]
+
+%>
+
+**ASSET PROVIDER**
+Name: [[Provider First Name]] [[Provider Last Name]]
+Address: [[Provider Address: Address]]
+
+**ASSET RENTER**
+Name: [[Renter First Name]] [[Renter Last Name]]
+Address: [[Renter Address: Address]]
+Phone Number: [[Renter Phone Number]]
+
+
+**VEHICLE DETAILS:**
+.[Provider First Name] [Provider Last Name], Provider, and [Renter First Name] [Renter Last Name], Renter, agree to the following temporary rental of a physical asset
+
+Provider agrees to rent to Renter, and Renter agrees to rent from owner, after inspection and confirmation, the following asset:
+Asset Type: [[Asset Type]]
+Asset Description: [[Asset Description]]
+
+^ Vehicle Type:  [[Vehicle Type]]
+^ Vehicle Year:  [[Vehicle Year]]
+^ Vehicle Make:  [[Vehicle Make]]
+^ Vehicle Model:  [[Vehicle Model]]
+^ Vehicle Color:  [[Vehicle Color]]
+^ Vehicle VIN: [[Vehicle VIN]]
+^ Odometer Reading (optional):  [[Odometer Reading]]
+
+To the Provider's best knowledge, the current mileage is accurate and correct.  
+
+**RENTAL DURATION**
+The rental amount is [[Asset Rental Fee]], with with an exchange rate to the dollar equal to the date where both sign the contract.  The rental will begin at [[Rental Start Day]] and end at [[Rental End Day]], lasting for [[Rental Duration]].
+
+**SECURITY DEPOSIT**
+In addition to the Asset rental fee, Renter agrees to secure [[Asset Deposit]] in a smart contract held on the [[Renter Wallet Currency]] blockchain.  This deposit will be applied to any additional costs owed due to damage or loss to the motorcycle.  If the item is returned in suitable condition, the owner agrees to release the deposit from the smart contract.  If the owner takes no action, both owner and renter agree that the smart contract will automatically release the deposit expiry after [deposit expiry]
+
+The Provider agrees to limit liability to the amount of the deposit.  If the Provider wishes full coverage for the asset, the Deposit Value should equal the Asset Value.   At no time will the Renter be liable to the Provider for more than the Deposit and the Rental Fee. 
+
+**DIGITAL CURRENCY CONVERSION**
+The dollar amounts listed in this contract will be converted to [[Provider Wallet Currency]] using the exchange rate posted at the time and date the reservation is set.
+
+**DELIVERY**
+Provider stipulates that the asset may be retrieved at [Address].  If the asset does not reside at that place, the Renter may cancel the reservation without penalty.  The Renter must activate the reservation for the Deposit Expiry date to be set, which is defined as [[Asset Deposit Expiry]] days from the activation of the reservation. 
+
+<!-- 8. Late Return  -->
+
+**DAMAGE OR LOSS**
+<!-- Renter will acknowledges receiving the equipment in good condition, and record any issues before activating  the reservation. -->
+
+Renter agrees to return asset to owner in good condition except where noted above.   If the asset is returned damaged, Renter is responsible for the cost of the repair, up unto the value of the deposit.  If the asset is lost or stolen while in the Renter's possession, Rent is responsible for the value of the deposit.
+
+Renter acknowledges use of the equipment creates some risk of personal injury as well as the risk of damage to property, and Renter expressly assumes that risk.  Renter therefore agrees to use the Equipment safely and only in the manner for which it is intended to be used.  Owner is not responsible for any personal injury or property damage resulting from Renter's misuse, unsafe use, or reckless use of the Asset.  Renter will indemnify and defend owner from and against any injury or damage arising out of Renter's misuse, unsafe use, or reckless uer of the Equipment.
+
+
+<!-- It's good to leave stuff out -->
+
+<!-- 13.  Successors and Assignees – {No} -->
+
+<!-- 14. Notices  - Notices are digital) -->
+
+<!-- 15. Governing Law (state) - not now -->
+
+**COUNTERPARTS**
+The agreement may be digitally signed by both parties and these signatures combined will create a document binding on all parties.  
+
+**PRICES AND VALUATIONS**
+Provider and Renter agree on the following values:
+ Asset Value:  [[Asset Value]]
+Asset Deposit: [[Asset Deposit]]
+Asset Rental Fee: [[Asset Rental Fee]] for [[Rental Duration]]
+
+**Wallets.**   Payments will be sent and received by the wallets below:
+Provider: [[Provider Wallet]], [[Provider Wallet Currency]]
+Renter: [[Renter Wallet]], [[Renter Wallet Currency]]
+Smart Contract Account:  [[Smart Contract Account]]
+
+Signed:  Asset Provider, date
+Signed:  Renter, date
+Signed Asset Received:  Renter, date
+Signed, Asset returned: Provider, Date | Renter, Date
+
+
+//solidity code block
