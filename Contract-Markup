@@ -1,3 +1,6 @@
+// I wrote this markup in the OpenLaw web editor.  OpenLaw is a tool to let lawyers mark up traditional contracts; then Solidity programmers can work the variables into a smart contract. 
+// I'm not really using this anymore.  I don't want to store all the asset details on the blockchain, just the simple generic deposit, the parties involved, the expiration date, and a note.
+
 <%
 ==Provider Information==
 [[Provider First Name]] 
