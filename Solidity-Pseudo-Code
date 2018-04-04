@@ -1,18 +1,52 @@
+pragma solidity ^0.4.19;
+
+// RK: I read this intro doc: https://medium.com/@iFirebrand/blockchain-learning-path-for-enterprise-software-colleagues-101cd72e760d
+// RK: This looks like a gentle intro to setting up the stack: https://medium.com/@mwallaceboulder/a-gentle-intro-to-building-a-full-stack-dapp-on-ethereum-part-1-c1aedb11fcd2
+// RK: I eventually bought and went through this very long course ($20), which wasn't bad, just long: https://www.udemy.com/blockchain-developer/
+
+
+// RK: The Hello world smart contract program (too hard for me)... https://www.ethereum.org/greeter
+
+contract SimpleDeposit {
+// Variables
+    struct Deposit {
+          uint256 depositid;                         // 0. in case I want to call one by number
+          address depositmaker;                       // 1a. deposit-maker's public ethereum wallet address
+          address deposittaker;                       // 1b. deposit-taker's public ethereum wallet address
+          uint256 depositamount;                      // 2. deposit amount
+          uint256 expiry;                              // 3. expiry
+          string note;                                 // 4. note
+     }
+
+// another doc I'm reading --- https://www.verypossible.com/blog/ethereum-smart-contracts-learning-solidity-by-example
+// in my mind, these are also public attributes.  So check out this...
+
+uint public depositid;
+address public depositmaker;
+address public deposittaker;
+
+// Functions
+// this isn't right yet.  We need to pass the variables into the functob, either by vaue or by reference
+function CreateDeposit(depositid, depositamount, depositmaker) public;      // 1. Start Deposit, Put ETH in smart contract, record wallets and expiry
+function ReleaseDeposit(depositid, depositamount, depositmaker) public;      // 2. End Deposit, Release Deposit to Deposit Maker
+function TransferDeposit(depositid, depositamount, deposittaker) public;       // 3. End Deposit, Transfer Deposit to Deposit Taker
+function UpdateDepositExpiry(depositid, oldexpiry, newexpiry, expiryupdater) public; // 4. Update Expiry
+// LATER: Store and transfer Fee for using Asset
+// LATER: Store and transfer fee for using Cinch
+    
+}
+// There are read-only functions (zero cost) and transactional functions
+
+// LATER: 
+// Handle authentication of both deposit maker and deposit taker
+// everything else is crap for offchain
 // What it needs to store and do, in brief
 // Variables:
 // * party data (just wallets?) 
-// * Asset data
-// * Deposit and fee data
-// * Rental duration and expiry data
+// * Asset data - LATER
+// * Deposit and fee data - FEE LATER
+// * Rental duration and expiry data - JUST DEPOSIT EXPIRY FOR NOW
 
-// Functions:
-// * create contract
-// * expire contract (transfer deposit back, transfer fee forward)
-// * dispute contract (remove expiry)
-// * resolve dispute (transfer deposit amount and fee)
-
-// Events?
-
-// -- questions, ideas -- 
-// Use self-destruct?
-// How to set expiry?
+// -- questions, ideas --
+// Use selfdestruct?
+// How to set expiry
