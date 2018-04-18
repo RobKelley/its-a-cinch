@@ -1,6 +1,17 @@
-# Demo Video - Remix + Rinkeby
 
-[![Deployment on rinkeby via remix](http://img.youtube.com/vi/HyGSpAoD9vA/0.jpg)](http://www.youtube.com/watch?v=HyGSpAoD9vA)
+## Workflow - how to create a SimpledEposit using a running DepositManager Contract
+
+Note - all fee values should be in Wei( 1 ether = 1,000,000,000,000,000,000 Wei) (convertor- https://etherconverter.online/ or web3.utils.toWei())
+
+* call the createDeposit function - `createDeposit(0xca35b7d915458ef540ade6068dfe2f44e8fa733c, 200000000000000000, 10)`   with the transaction value set to greator than or equal to the fee value ( in this example - value >= 0.4 ether)
+* get the address for Simple Deposit Contract by findMyDeposit function and share it with the assetOwner
+* assetOwner adds the uniqueAssetIdentifier by calling the `shareAssetInfo()` function
+* After the set expiry time, depositor calls the `retrieveDeposit()` function. This will pay the assetOwner his owed fees, then transafer rest of the deposit amount back to the depositor and then self destruct the SimpleDeposit Contract.
+
+
+- Suppose the AssetOwner never updates the assetInfo on time, the depositor can then call `voidDeposit()` function to get back his deposit and self-destruct the Contract.
+- `voidDeposit()` may be called by the depositor for any other reason but only until the assetOwner has *not* shared the assetInfo.
+
 
 # Description
 
